@@ -8,7 +8,7 @@ if (isset($_POST['napravi'])) {
 	$email = $_POST['email'];
 	$id_uloga = $_POST['id_uloga'];
 
-	$upit = "INSERT into korisnik VALUES('', $korIme', '$lozinka' '$email', '$id_uloga')";
+	$upit = "INSERT into korisnik VALUES('', '$korIme', '$lozinka', '$email', '$id_uloga')";
 	$rez = mysql_query($upit, $konekcija);
 	if ($rez) {
 		$rezultat = 'uspesno ste uneli korisnka';
