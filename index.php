@@ -1,8 +1,8 @@
 <?php
 require_once './konekcija.php';
 require_once './logovanje.php';
-//require_once './postovi.php';
 require_once './mail.php';
+require_once './registracija.php';
 ?>
 <!DOCTYPE HTML>
 <!--
@@ -125,29 +125,31 @@ require_once './mail.php';
 		<section id="contact" class="wrapper">
 			<div class="inner split">
 				<section>
-					<h2>Orci malesuada</h2>
-					<p>
-						<?php
-						$grad = 'Novi Sad';
-						echo strstr($grad, 'i', true) . '<br />';
-						echo substr($grad, 1);
-						?>
-					</p>
+					<h2>Napravi novi profil</h2>
 					<p><?php echo $greske['email']; ?></p>
-					<form name="forma_mail" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="alt" method="POST">
+					<form name="unesi" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="alt" method="POST">
 						<div class="row uniform">
 							<div class="6u 12u(xsmall)">
-								<input name="name" placeholder="Name" type="text">
+								<input name="korisnicko_ime" placeholder="User name" type="text">
+							</div>
+							<div class="6u 12u(xsmall)">
+								<input name="lozinka" placeholder="Password" type="password">
 							</div>
 							<div class="6u 12u(xsmall)">
 								<input name="email" placeholder="Email" type="email">
 							</div>
-							<div class="12u">
-								<textarea name="message" placeholder="Message" rows="4"></textarea>
+							<div class="6u 12u(xsmall)">
+								<select name="id_uloga">
+									<option value="2">Obican korisnik</option>
+									<option value="1">Administrator</option>
+								</select>
 							</div>
 						</div>
 						<ul class="actions">
-							<li><input name="send" class="alt" value="Send message" type="submit"></li>
+							<li><input name="napravi" class="alt" value="Napravi" type="submit"></li>
+						</ul>
+						<ul class="actions">
+							<li><?php echo ($rezultat) ? "Uspesno ste uneli korisnika" : "Doslo je do greske..."; ?></li>
 						</ul>
 					</form>
 				</section>
