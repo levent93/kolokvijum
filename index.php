@@ -149,7 +149,7 @@ require_once './registracija.php';
 							<li><input name="napravi" class="alt" value="Napravi" type="submit"></li>
 						</ul>
 						<ul class="actions">
-							<li><?php echo ($rezultat !== '') ? "Uspesno ste uneli korisnika" : "Doslo je do greske..."; ?></li>
+							<li><?php echo $rezultat; ?></li>
 						</ul>
 					</form>
 				</section>
