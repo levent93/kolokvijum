@@ -6,7 +6,7 @@ if (isset($_POST['napravi'])) {
 	$korIme = $_POST['korisnicko_ime'];
 	$lozinka = $_POST['lozinka'];
 	$email = $_POST['email'];
-	$id_uloga['id_uloga'];
+	$id_uloga = $_POST['id_uloga'];
 
 	$upit = "INSERT into korisnik VALUES('', $korIme', '$lozinka' '$email', '$id_uloga')";
 	$rez = mysql_query($upit, $konekcija);
