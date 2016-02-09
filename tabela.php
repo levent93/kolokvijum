@@ -19,7 +19,11 @@ $tabela = mysql_query($upit, $konekcija);
 				<td><?php echo $stanar['ime']; ?></td>
 				<td><?php echo $stanar['prezime']; ?></td>
 				<td><?php echo $stanar['pol']; ?></td>
-				<td><input type="button" name="obrisi" id='obrisi' value="obrisi"  onclick="obrisi('<?php echo $stanar['id'] ?>', '<?php echo $stanar['grad'] ?>')" ></td>
+				<td>
+					<a onclick="obrisi('<?php echo $stanar['id'] ?>', '<?php echo $stanar['grad'] ?>')">
+						<i class="fa fa-trash-o"></i>
+					</a>
+				</td>
 			</tr>
 		<?php } ?>
 	</tbody>

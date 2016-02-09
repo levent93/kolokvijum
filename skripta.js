@@ -63,7 +63,7 @@ function obrisi(id, grad) {
 			document.getElementById(grad).innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("GET", "obrisired.php?id=" + id + "& grad=" + grad, true);
+	xhttp.open("GET", "obrisired.php?id=" + id + "&grad=" + grad, true);
 	xhttp.send();
 }
 
