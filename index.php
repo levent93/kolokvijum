@@ -125,7 +125,7 @@ require_once './registracija.php';
 		<section id="contact" class="wrapper">
 			<div class="inner split">
 				<section>
-					<h2>Napravi novi profil</h2>
+					<h2>Dodaj novog korisnika</h2>
 					<p><?php echo $greske['email']; ?></p>
 					<form name="unesi" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="alt" method="POST">
 						<div class="row uniform">

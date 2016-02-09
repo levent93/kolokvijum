@@ -3,16 +3,16 @@
 $rezultat = "";
 
 if (isset($_POST['napravi'])) {
-	$korIme = $_POST['korisnicko_ime'];
+	$korisnicko_ime = $_POST['korisnicko_ime'];
 	$lozinka = $_POST['lozinka'];
 	$email = $_POST['email'];
 	$id_uloga = $_POST['id_uloga'];
 
-	$upit = "INSERT into korisnik VALUES('', '$korIme', '$lozinka', '$email', '$id_uloga')";
+	$upit = "INSERT INTO `korisnik` VALUES('', '$korisnicko_ime', '$lozinka', '$email', '$id_uloga')";
 	$rez = mysql_query($upit, $konekcija);
 	if ($rez) {
-		$rezultat = 'uspesno ste uneli korisnka';
+		$rezultat = 'Uspesno ste uneli korisnka';
 	} else {
-		$rezultat = 'Doslo je do greske Mjustafa pjederu!!!!';
+		$rezultat = 'Doslo je do greske';
 	}
 }
