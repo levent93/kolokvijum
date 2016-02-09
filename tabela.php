@@ -20,7 +20,7 @@ $tabela = mysql_query($upit, $konekcija);
 				<td><?php echo $stanar['prezime']; ?></td>
 				<td><?php echo $stanar['pol']; ?></td>
 				<td>
-					<a onclick="obrisi('<?php echo $stanar['id'] ?>', '<?php echo $stanar['grad'] ?>')">
+					<a onclick="obrisi('<?php echo $stanar['id']; ?>', '<?php echo $stanar['grad']; ?>')">
 						<i class="fa fa-trash-o"></i>
 					</a>
 				</td>
