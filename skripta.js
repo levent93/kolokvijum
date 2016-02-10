@@ -56,14 +56,25 @@ function trazi(sadrzaj) {
 	xhttp.open("GET", "pretraga.php?po=" + po + "&sadrzaj=" + sadrzaj, true);
 	xhttp.send();
 }
-function obrisi(id, grad) {
+function brisanje(id, grad) {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function () {
 		if (xhttp.readyState == 4 && xhttp.status == 200) {
 			document.getElementById(grad).innerHTML = xhttp.responseText;
 		}
 	};
-	xhttp.open("GET", "obrisired.php?id=" + id + "&grad=" + grad, true);
+	xhttp.open("GET", "brisanje.php?id=" + id + "&grad=" + grad, true);
+	xhttp.send();
+}
+
+function izmena(id, grad) {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function () {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById(grad).innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "tabela.php?id=" + id + "&grad=" + grad, true);
 	xhttp.send();
 }
 
