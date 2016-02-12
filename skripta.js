@@ -78,6 +78,20 @@ function izmena(id, grad) {
 	xhttp.send();
 }
 
+function sacuvaj(id, grad) {
+	var xhttp = new XMLHttpRequest();
+	var ime = document.getElementById('ime');
+	var prezime = document.getElementById('prezime');
+	var pol = document.getElementById('pol');
+	xhttp.onreadystatechange = function () {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById(grad).innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "sacuvaj.php?id=" + id + "&grad=" + grad + "&ime=" + ime.value + "&prezime=" + prezime.value + "&pol=" + pol.value, true);
+	xhttp.send();
+}
+
 function provera()
 {
 	document.getElementById('logovanje').submit();

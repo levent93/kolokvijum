@@ -19,22 +19,24 @@ $tabela = mysql_query($upit, $konekcija);
 			<?php if (isset($_GET['id']) && $_GET['id'] == $stanar['id']) { ?>
 			<form>
 				<tr>
-					<td><input type="text" name ="name" value="<?php echo $stanar['ime']; ?>" /></td>
-					<td><input type="text" name ="prezime" value="<?php echo $stanar['prezime']; ?>" /></td>
-					<td><input type="text" name ="pol" value="<?php echo $stanar['pol']; ?>" /></td>
+					<td><input type="text" id="ime" name ="ime" value="<?php echo $stanar['ime']; ?>" /></td>
+					<td><input type="text" id="prezime" name ="prezime" value="<?php echo $stanar['prezime']; ?>" /></td>
+					<td><input type="text" id="pol" name ="pol" value="<?php echo $stanar['pol']; ?>" /></td>
 					<td>
 						<a title="Obrisi" onclick="brisanje('<?php echo $stanar['id']; ?>', '<?php echo $stanar['grad']; ?>')">
 							<i class="fa fa-trash-o"></i>
 						</a>
 					</td>
 					<td>
-						<a title="Sacuvaj" onclick="izmena('<?php echo $stanar['id']; ?>', '<?php echo $stanar['grad']; ?>')">
+						<a title="Sacuvaj" onclick="sacuvaj('<?php echo $stanar['id']; ?>', '<?php echo $stanar['grad']; ?>')">
 							<i class="fa fa-save"></i>
 						</a>
+						<?php unset($stanar['id']);
+						unset($id); ?>
 					</td>
 				</tr>
 			</form>
-		<?php } else { ?>
+	<?php } else { ?>
 			<tr>
 				<td><?php echo $stanar['ime']; ?></td>
 				<td><?php echo $stanar['prezime']; ?></td>
@@ -50,7 +52,8 @@ $tabela = mysql_query($upit, $konekcija);
 					</a>
 				</td>
 			</tr>
-		<?php }
+		<?php
+		}
 	}
 	?>
 </tbody>
