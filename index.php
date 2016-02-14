@@ -42,7 +42,7 @@ require_once './registracija.php';
 								</div>
 							</div>
 							<ul class="actions">
-								<li><input name="uloguj" class="button special" value="Uloguj se!" type="submit"></li>
+								<li><input name="uloguj" class="button special" value="Uloguj se!" type="button" onclick="provera()"></li>
 							</ul>
 						</form>
 					<?php } else { ?>

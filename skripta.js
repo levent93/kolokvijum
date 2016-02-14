@@ -95,20 +95,20 @@ function sacuvaj(id, grad) {
 function provera()
 {
 	document.getElementById('logovanje').submit();
-//	var forma = document.logovanje;
-//	var user = forma.user.value;
-//	var password = forma.password.value;
-//
-//	var re_user = /^[A-z0-9]{4,}$/;
-//
-//	if (user == '' || password == '')
-//	{
-//		alert('Korisnicko ime i lozinka ne smeju biti prazni!');
-//	} else if (!user.match(re_user))
-//	{
-//		alert('ime nije u dobrom formatu');
-//	} else
-//	{
-//		forma.submit();
-//	}
+	var forma = document.logovanje;
+	var user = forma.user.value;
+	var password = forma.password.value;
+
+	var re_user = /^[A-z0-9]{4,}$/;
+
+	if (user == '' || password == '')
+	{
+		alert('Korisnicko ime i lozinka ne smeju biti prazni!');
+	} else if (!user.match(re_user))
+	{
+		alert('ime nije u dobrom formatu');
+	} else
+	{
+		document.logovanje.submit();
+	}
 }
