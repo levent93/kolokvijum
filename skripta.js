@@ -94,7 +94,7 @@ function sacuvaj(id, grad) {
 
 function provera()
 {
-	document.getElementById('logovanje').submit();
+//	document.getElementById('logovanje').submit();
 //	var forma = document.logovanje;
 //	var user = forma.user.value;
 //	var password = forma.password.value;
@@ -109,6 +109,6 @@ function provera()
 //		alert('ime nije u dobrom formatu');
 //	} else
 //	{
-//		forma.submit();
+//		document.logovanje.submit();
 //	}
 }
