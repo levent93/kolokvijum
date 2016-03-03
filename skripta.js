@@ -56,10 +56,45 @@ function trazi(sadrzaj) {
 	xhttp.open("GET", "pretraga.php?po=" + po + "&sadrzaj=" + sadrzaj, true);
 	xhttp.send();
 }
+function brisanje(id, grad) {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function () {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById(grad).innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "brisanje.php?id=" + id + "&grad=" + grad, true);
+	xhttp.send();
+}
+
+function izmena(id, grad) {
+	var xhttp = new XMLHttpRequest();
+	xhttp.onreadystatechange = function () {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById(grad).innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "tabela.php?id=" + id + "&grad=" + grad, true);
+	xhttp.send();
+}
+
+function sacuvaj(id, grad) {
+	var xhttp = new XMLHttpRequest();
+	var ime = document.getElementById('ime');
+	var prezime = document.getElementById('prezime');
+	var pol = document.getElementById('pol');
+	xhttp.onreadystatechange = function () {
+		if (xhttp.readyState == 4 && xhttp.status == 200) {
+			document.getElementById(grad).innerHTML = xhttp.responseText;
+		}
+	};
+	xhttp.open("GET", "sacuvaj.php?id=" + id + "&grad=" + grad + "&ime=" + ime.value + "&prezime=" + prezime.value + "&pol=" + pol.value, true);
+	xhttp.send();
+}
 
 function provera()
 {
-	document.getElementById('logovanje').submit();
+//	document.getElementById('logovanje').submit();
 //	var forma = document.logovanje;
 //	var user = forma.user.value;
 //	var password = forma.password.value;
@@ -74,6 +109,6 @@ function provera()
 //		alert('ime nije u dobrom formatu');
 //	} else
 //	{
-//		forma.submit();
+//		document.logovanje.submit();
 //	}
 }

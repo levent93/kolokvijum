@@ -25,7 +25,7 @@ require_once './registracija.php';
 		<section id="banner">
 			<div class="inner split">
 				<section>
-					<h2 onclick="loadDoc();">Trenutno vreme sada</h2>
+					<h2 onclick="loadDoc();">MJUSTAFA PJEDERU NE MENJAJ MOJE FAJLOVE</h2>
 					<p id="timer"></p>
 					<input type="button" id="prikazi" class="button special" value="Prikazi" onclick="prikazi(1, 0);">
 					<input type="button" id="sakri" class="button special" value="Sakri" onclick="prikazi(0, 0);">
@@ -125,7 +125,7 @@ require_once './registracija.php';
 		<section id="contact" class="wrapper">
 			<div class="inner split">
 				<section>
-					<h2>Napravi novi profil</h2>
+					<h2>Dodaj novog korisnika</h2>
 					<p><?php echo $greske['email']; ?></p>
 					<form name="unesi" action="<?php htmlspecialchars($_SERVER['PHP_SELF']); ?>" class="alt" method="POST">
 						<div class="row uniform">
